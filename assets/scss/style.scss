@@ -1,0 +1,351 @@
+@import "overrides";
+@import "../css/circular-font.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
+}
+
+// *::-webkit-scrollbar-track {
+//   -webkit-box-shadow: none !important;
+//   background-color: transparent !important;
+// }
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ffffff10;
+  display: none;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  display: block;
+  background-color: $secondary;
+}
+
+input.search-box {
+  border-left: none;
+  // padding-left: 0;
+}
+
+span.search-box {
+  border-right: none;
+}
+
+.home-hero-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6) 0, #121212 30%);
+}
+
+// .home-hero-container {
+//   transition: opacity 0.3s, visibility 0.3s, top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+// }
+
+// .home-hero-container::-webkit-scrollbar {
+//   width: 14px;
+// }
+
+// .home-hero-container::-webkit-scrollbar-track {
+//   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to $primary);
+//   background-image: linear-gradient(rgba(0, 0, 0, 0.6) 0, $primary 100%);
+//   background: transparent;
+// }
+
+// .home-hero-container::-webkit-scrollbar-thumb {
+//   background-color: hsla(0, 0%, 100%, 0.3);
+// }
+//-----------------CLASSI
+.img-album {
+  width: 280px;
+}
+
+#range {
+  overflow: hidden;
+  background: linear-gradient(to right, white 0%, white 100%, $sixth 0%, $sixth 100%);
+  border: none;
+  accent-color: white;
+  border-radius: 20px;
+  height: 6px;
+
+  -webkit-appearance: none;
+}
+
+#range:hover {
+  overflow: visible;
+}
+.box {
+  width: 35px;
+  height: 35px;
+  border-radius: 60%;
+  position: relative;
+}
+.box-bottombar {
+  width: 27px;
+  height: 27px;
+}
+.play-background {
+  width: 50px;
+  height: 50px;
+  border-radius: 60%;
+  background-color: #2edf64;
+  position: sticky;
+  top: 0px;
+}
+.height-for-fixed-bottom {
+  height: 80px;
+  width: 100%;
+}
+
+.btn-head {
+  padding-block: 0;
+  padding-inline: 2rem;
+  border-radius: 25px;
+  height: 25px;
+}
+.progress {
+  height: 3px;
+  // width: 500px;
+}
+.hov:hover {
+  background-color: rgba(255, 255, 255, 0.109);
+  border-radius: 20px;
+}
+.hov:hover {
+  background-color: rgba(255, 255, 255, 0.109);
+  border-radius: 20px;
+}
+.plusPiu:hover {
+  color: white;
+  font-size: 1.15em;
+}
+.plusPiuDot:hover {
+  color: white;
+  font-size: 1.15em;
+}
+.cuori:hover {
+  color: white;
+  font-size: 1.15em;
+}
+.punti:hover {
+  color: white;
+  font-size: 1.15em;
+}
+.pro:hover {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+// .home-sidebar {
+//   min-width: 300px;
+//   width: 300px;
+// }
+
+.home-sidebar-buttons {
+  position: relative;
+}
+
+.home-sidebar-buttons a {
+  padding-inline: 10px;
+}
+
+.home-sidebar-buttons-faded {
+  -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 120px), transparent);
+  mask-image: linear-gradient(90deg, #000 calc(100% - 120px), transparent);
+}
+
+.home-sidebar-buttons-next {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.home-sidebar-list img {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+}
+
+.home-sidebar-fix {
+  height: calc(100vh - 217px);
+}
+
+.home-hero {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to $primary);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6) 0, $primary 100%);
+  margin-top: -72px;
+}
+
+.home-hero-nav {
+  padding: 20px;
+  transition: 0.5s background-color;
+}
+
+.home-hero-nav img,
+.search-hero-nav img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50vh;
+  border: 3px solid $primary;
+}
+
+.home-card {
+  height: 100%;
+  background-color: $tertiary;
+}
+
+.home-card img {
+  width: 100%;
+}
+
+#home-container {
+  height: calc(100vh - 90px);
+}
+
+.search-card div {
+}
+
+.search-card img {
+  position: absolute;
+
+  -webkit-transform: rotate(25deg) translate(18%, -2%);
+  transform: rotate(25deg) translate(18%, -2%);
+  right: 0;
+  bottom: 0;
+  width: 60%;
+  height: 60%;
+}
+
+.play-track {
+  cursor: pointer;
+}
+
+#search-artist-box {
+}
+
+#search-artist-box img {
+  width: 92px;
+}
+
+#search-artist-side-box img {
+  width: 40px;
+  height: 40px;
+}
+
+#search-artist-side-box p {
+  margin: 0;
+  padding: 0;
+}
+
+.heart-icon {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.heart-icon.active {
+  visibility: visible;
+  opacity: 1;
+}
+.dots-icon {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.dots-icon.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+#heart-icon.green {
+  color: green;
+}
+
+.artist-hero {
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position: top;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#artist-main-content {
+  margin-top: 428px;
+}
+
+#artist-list-items {
+  list-style-type: decimal;
+  list-style-position: inside;
+  display: block;
+}
+
+.artist-list-items-container:hover {
+  background-color: rgba(255, 255, 255, 0.082);
+}
+
+.selected-song {
+  background-color: #f5f5f548;
+}
+.selected-song:hover {
+  background-color: #f5f5f548;
+}
+
+#artist-list {
+  counter-reset: item;
+}
+#artist-list-items:before {
+  content: counter(item) " ";
+  counter-increment: item;
+}
+
+.artist-hero-container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5060399159663865) 27%, rgba(255, 255, 255, 0) 54%);
+}
+
+.btn-check:checked + .btn {
+  background-color: white;
+  color: black;
+}
+
+.song-number {
+  width: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5px;
+}
+
+.song-number span {
+  display: inline-block;
+}
+
+.dropend:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+.dropend:hover > .dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+}

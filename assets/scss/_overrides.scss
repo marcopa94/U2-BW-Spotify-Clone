@@ -1,0 +1,126 @@
+@import "../../node_modules/bootstrap/scss/functions";
+
+$font-family-sans-serif: Circular;
+// $enable-important-utilities: true;
+
+$primary: #121212;
+$secondary: #232323;
+$tertiary: #181818;
+$forth: #242424;
+$fifth: #232323;
+$sixth: #535353;
+$sub: #b3b3b3;
+
+$custom-colors: (
+  "tertiary": $tertiary,
+  "forth": $forth,
+  "fifth": $fifth,
+  "nero": #050505,
+  "sisth": $sixth,
+  "sub": $sub,
+);
+
+$btn-border-radius: 50vh;
+$btn-border-radius-sm: 50vh;
+
+$grid-row-columns: 9 !default;
+
+// .bg-forth {
+//   background-color: $forth;
+// }
+
+// @mixin bg-forth() {
+//   background-color: $forth;
+// }
+
+$font-size-base: 1rem;
+
+$h7-font-size: 0.85rem;
+$h8-font-size: 0.65rem;
+$h9-font-size: 0.5rem;
+
+$custom-font-sizes: (
+  7: $h7-font-size,
+  8: $h8-font-size,
+  9: $h9-font-size,
+);
+
+$custom-display-font-sizes: (
+  7: $h7-font-size,
+  8: $h8-font-size,
+  9: $h9-font-size,
+);
+
+$input-padding-x-lg: 10px;
+$input-border-color: white;
+$input-border-width: 2px;
+$input-border-radius-lg: 50vh;
+$input-focus-border-color: white;
+$input-focus-box-shadow: none;
+$form-color-width: 3rem;
+$input-group-addon-border-color: white;
+
+// import
+
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+@import "../../node_modules/bootstrap/scss/maps";
+
+$display-font-sizes: map-merge($display-font-sizes, $custom-font-sizes);
+$font-sizes: map-merge($font-sizes, $custom-font-sizes);
+$all-colors: map-merge-multiple($custom-colors, $theme-colors);
+$theme-colors: map-merge-multiple($custom-colors, $theme-colors);
+
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/utilities";
+
+.home-sidebar {
+  // min-width: 300px;
+  width: auto;
+}
+@include media-breakpoint-up(lg) {
+  .home-sidebar {
+    width: 300px;
+  }
+}
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "color":
+      map-merge(
+        map-get($utilities, "color"),
+        (
+          values: map-merge(map-get(map-get($utilities, "color"), "values"), ($all-colors)),
+        )
+      ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "background-color":
+      map-merge(
+        map-get($utilities, "background-color"),
+        (
+          values: map-merge(map-get(map-get($utilities, "background-color"), "values"), ($all-colors)),
+        )
+      ),
+  )
+);
+
+// $utilities: map-merge(
+//   $utilities,
+//   (
+//     "text-color":
+//       map-merge(
+//         map-get($utilities, "text-color"),
+//         (
+//           values: map-merge(map-get(map-get($utilities, "text-color"), "values"), ($all-colors)),
+//         )
+//       ),
+//   )
+// );
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
